@@ -1,7 +1,7 @@
 <?php
 $servername = "mysqlserverhost";
 $username = "sql_user";
-$password = "pass";
+$password = "password0987654321";
 $dbname = "dare";
 
 
