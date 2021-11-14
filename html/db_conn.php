@@ -1,6 +1,6 @@
 <?php
 $servername = "mysqlserverhost";
-$username = "root";
+$username = "sql_user";
 $password = "pass";
 $dbname = "dare";
 
