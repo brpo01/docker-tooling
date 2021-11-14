@@ -2,7 +2,7 @@
 $servername = "mysqlserverhost";
 $username = "sql_user";
 $password = "password0987654321";
-$dbname = "dare";
+$dbname = "toolingdb";
 
 
 // Create connection
