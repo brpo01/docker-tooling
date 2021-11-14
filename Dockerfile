@@ -1,5 +1,5 @@
-FROM php:7-apache
-MAINTAINER Dare dare@zooto.io
+FROM php:7-apache 
+MAINTAINER Rotimi opraise139@gmail.com
 
 RUN docker-php-ext-install mysqli
 COPY apache-config.conf /etc/apache2/sites-available/000-default.conf
@@ -11,3 +11,5 @@ COPY html /var/www
 RUN chown -R www-data:www-data /var/www
 
 CMD ["start-apache"]
+
+## -- Instructions for Dock
