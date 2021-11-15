@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  tooling_app:
+    build: .
+    ports:
+      - 5000:80
+    volumes:
+      - ./html:var/www/html
+    link:
+      - tooling_db
+    depends_on:
+      - tooling_db
+    ports:
+      - 8085:80
+  tooling_db:
+    
