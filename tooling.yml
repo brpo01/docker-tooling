@@ -26,8 +26,6 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - db:/var/lib/mysql
-    ports: 
-      - ${DB_PORT}:3306
 volumes:
   tooling_app:
   db:
