@@ -4,6 +4,8 @@ services:
   tooling_app:
     build: .
     container_name: tooling_app
+    ports:
+      - ${APP_PORT}:80
     volumes:
       - tooling_app:/var/www/html
     links:
@@ -14,16 +16,18 @@ services:
       - 8085:80
   tooling_db:
     image: mysql:5.7
-    hostname: mysqlserverhost
+    hostname: ${MYSQL_HOSTNAME}
     container_name: tooling_db
     restart: always
     environment:
-      MYSQL_DATABASE: toolingdb
-      MYSQL_USER: sql_user
-      MYSQL_PASSWORD: password0987654321
-      MYSQL_ROOT_PASSWORD: password1234567
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - db:/var/lib/mysql
+    ports: 
+      - ${DB_PORT}:3306
 volumes:
   tooling_app:
   db:
