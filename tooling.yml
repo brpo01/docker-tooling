@@ -3,6 +3,7 @@ version: "3.9"
 services:
   tooling_app:
     build: .
+    container_name: tooling_app
     ports:
       - 5000:80
     volumes:
@@ -14,4 +15,18 @@ services:
     ports:
       - 8085:80
   tooling_db:
+    image: mysql:5.7
+    container_name: tooling_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: 
+      MYSQL_USER:
+      MYSQL_PASSWORD:
+      MYSQL_ROOT_PASSWORD:
+    volumes:
+      - db:/var/lib/mysql
+    ports: 
+      - 9085:3306
+    
+
     
