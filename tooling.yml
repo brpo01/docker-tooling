@@ -12,8 +12,6 @@ services:
       - tooling_db
     depends_on:
       - tooling_db
-    ports:
-      - 8085:80
   tooling_db:
     image: mysql:5.7
     hostname: ${MYSQL_HOSTNAME}
