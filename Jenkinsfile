@@ -51,6 +51,7 @@ pipeline {
 
         stage('Remove Images') {
             steps {
+                sh "docker-compose down"
                 sh "docker rmi tobyrotimi/docker-tooling:${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
             }
         }
