@@ -26,11 +26,11 @@ pipeline {
             }
         }
 
-        // stage('Start the application') {
-        //     steps {
-        //         sh "docker-compose up -d"
-        //     }
-        // }
+        stage('Start the application') {
+            steps {
+                sh "docker-compose up -d"
+            }
+        }
 
         stage('Test endpoint & Push Image to Registry') {
             steps{
