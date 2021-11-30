@@ -1,4 +1,4 @@
-FROM php:7-apache 
+FROM php:7-apache-buster
 MAINTAINER Rotimi opraise139@gmail.com
 
 RUN docker-php-ext-install mysqli
