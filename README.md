@@ -2,8 +2,6 @@
 
 ## TOOLING APP CONTAINERIZATION
 
-Repo: https://github.com/brpo01/docker-tooling-webapp
-
 ### Docker Installation
 
 You can learn how to install Docker Engine on your PC [here](https://docs.docker.com/engine/install/)
